@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F711AA9C1A99B48D00A2FCF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AA9B1A99B48D00A2FCF8 /* main.m */; };
+		F711AA9F1A99B48D00A2FCF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AA9E1A99B48D00A2FCF8 /* AppDelegate.m */; };
+		F711AAA21A99B48D00A2FCF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AAA11A99B48D00A2FCF8 /* ViewController.m */; };
+		F711AAA51A99B48D00A2FCF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F711AAA31A99B48D00A2FCF8 /* Main.storyboard */; };
+		F711AAA71A99B48D00A2FCF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F711AAA61A99B48D00A2FCF8 /* Images.xcassets */; };
+		F711AAAA1A99B48D00A2FCF8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F711AAA81A99B48D00A2FCF8 /* LaunchScreen.xib */; };
+		F711AAB61A99B48D00A2FCF8 /* HTN_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AAB51A99B48D00A2FCF8 /* HTN_ChallengeTests.m */; };
+		F711AACD1A99B74300A2FCF8 /* HTNTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AACC1A99B74300A2FCF8 /* HTNTableViewController.m */; };
+		F711AAD01A99B90F00A2FCF8 /* HTNAttendee.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AACF1A99B90F00A2FCF8 /* HTNAttendee.m */; };
+		F711AAD61A99F5E900A2FCF8 /* HTNUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AAD51A99F5E900A2FCF8 /* HTNUITableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F711AAB01A99B48D00A2FCF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F711AA8E1A99B48D00A2FCF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F711AA951A99B48D00A2FCF8;
+			remoteInfo = "HTN Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F711AA961A99B48D00A2FCF8 /* HTN Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HTN Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F711AA9A1A99B48D00A2FCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F711AA9B1A99B48D00A2FCF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F711AA9D1A99B48D00A2FCF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F711AA9E1A99B48D00A2FCF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F711AAA01A99B48D00A2FCF8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F711AAA11A99B48D00A2FCF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F711AAA41A99B48D00A2FCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F711AAA61A99B48D00A2FCF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F711AAA91A99B48D00A2FCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F711AAAF1A99B48D00A2FCF8 /* HTN ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HTN ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F711AAB41A99B48D00A2FCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F711AAB51A99B48D00A2FCF8 /* HTN_ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTN_ChallengeTests.m; sourceTree = "<group>"; };
+		F711AACB1A99B74300A2FCF8 /* HTNTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNTableViewController.h; sourceTree = "<group>"; };
+		F711AACC1A99B74300A2FCF8 /* HTNTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNTableViewController.m; sourceTree = "<group>"; };
+		F711AACE1A99B90F00A2FCF8 /* HTNAttendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNAttendee.h; sourceTree = "<group>"; };
+		F711AACF1A99B90F00A2FCF8 /* HTNAttendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNAttendee.m; sourceTree = "<group>"; };
+		F711AAD41A99F5E900A2FCF8 /* HTNUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTNUITableViewCell.h; path = ../HTNUITableViewCell.h; sourceTree = "<group>"; };
+		F711AAD51A99F5E900A2FCF8 /* HTNUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTNUITableViewCell.m; path = ../HTNUITableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F711AA931A99B48D00A2FCF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F711AAAC1A99B48D00A2FCF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F711AA8D1A99B48D00A2FCF8 = {
+			isa = PBXGroup;
+			children = (
+				F711AA981A99B48D00A2FCF8 /* HTN Challenge */,
+				F711AAB21A99B48D00A2FCF8 /* HTN ChallengeTests */,
+				F711AA971A99B48D00A2FCF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F711AA971A99B48D00A2FCF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F711AA961A99B48D00A2FCF8 /* HTN Challenge.app */,
+				F711AAAF1A99B48D00A2FCF8 /* HTN ChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F711AA981A99B48D00A2FCF8 /* HTN Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				F711AAD41A99F5E900A2FCF8 /* HTNUITableViewCell.h */,
+				F711AAD51A99F5E900A2FCF8 /* HTNUITableViewCell.m */,
+				F711AA9D1A99B48D00A2FCF8 /* AppDelegate.h */,
+				F711AA9E1A99B48D00A2FCF8 /* AppDelegate.m */,
+				F711AAA01A99B48D00A2FCF8 /* ViewController.h */,
+				F711AAA11A99B48D00A2FCF8 /* ViewController.m */,
+				F711AAA31A99B48D00A2FCF8 /* Main.storyboard */,
+				F711AACB1A99B74300A2FCF8 /* HTNTableViewController.h */,
+				F711AACC1A99B74300A2FCF8 /* HTNTableViewController.m */,
+				F711AACE1A99B90F00A2FCF8 /* HTNAttendee.h */,
+				F711AACF1A99B90F00A2FCF8 /* HTNAttendee.m */,
+				F711AAA61A99B48D00A2FCF8 /* Images.xcassets */,
+				F711AAA81A99B48D00A2FCF8 /* LaunchScreen.xib */,
+				F711AA991A99B48D00A2FCF8 /* Supporting Files */,
+			);
+			path = "HTN Challenge";
+			sourceTree = "<group>";
+		};
+		F711AA991A99B48D00A2FCF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F711AA9A1A99B48D00A2FCF8 /* Info.plist */,
+				F711AA9B1A99B48D00A2FCF8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F711AAB21A99B48D00A2FCF8 /* HTN ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F711AAB51A99B48D00A2FCF8 /* HTN_ChallengeTests.m */,
+				F711AAB31A99B48D00A2FCF8 /* Supporting Files */,
+			);
+			path = "HTN ChallengeTests";
+			sourceTree = "<group>";
+		};
+		F711AAB31A99B48D00A2FCF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F711AAB41A99B48D00A2FCF8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F711AA951A99B48D00A2FCF8 /* HTN Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F711AAB91A99B48D00A2FCF8 /* Build configuration list for PBXNativeTarget "HTN Challenge" */;
+			buildPhases = (
+				F711AA921A99B48D00A2FCF8 /* Sources */,
+				F711AA931A99B48D00A2FCF8 /* Frameworks */,
+				F711AA941A99B48D00A2FCF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HTN Challenge";
+			productName = "HTN Challenge";
+			productReference = F711AA961A99B48D00A2FCF8 /* HTN Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F711AAAE1A99B48D00A2FCF8 /* HTN ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F711AABC1A99B48D00A2FCF8 /* Build configuration list for PBXNativeTarget "HTN ChallengeTests" */;
+			buildPhases = (
+				F711AAAB1A99B48D00A2FCF8 /* Sources */,
+				F711AAAC1A99B48D00A2FCF8 /* Frameworks */,
+				F711AAAD1A99B48D00A2FCF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F711AAB11A99B48D00A2FCF8 /* PBXTargetDependency */,
+			);
+			name = "HTN ChallengeTests";
+			productName = "HTN ChallengeTests";
+			productReference = F711AAAF1A99B48D00A2FCF8 /* HTN ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F711AA8E1A99B48D00A2FCF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Nolan Dey";
+				TargetAttributes = {
+					F711AA951A99B48D00A2FCF8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F711AAAE1A99B48D00A2FCF8 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = F711AA951A99B48D00A2FCF8;
+					};
+				};
+			};
+			buildConfigurationList = F711AA911A99B48D00A2FCF8 /* Build configuration list for PBXProject "HTN Challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F711AA8D1A99B48D00A2FCF8;
+			productRefGroup = F711AA971A99B48D00A2FCF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F711AA951A99B48D00A2FCF8 /* HTN Challenge */,
+				F711AAAE1A99B48D00A2FCF8 /* HTN ChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F711AA941A99B48D00A2FCF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F711AAA51A99B48D00A2FCF8 /* Main.storyboard in Resources */,
+				F711AAAA1A99B48D00A2FCF8 /* LaunchScreen.xib in Resources */,
+				F711AAA71A99B48D00A2FCF8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F711AAAD1A99B48D00A2FCF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F711AA921A99B48D00A2FCF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F711AAD61A99F5E900A2FCF8 /* HTNUITableViewCell.m in Sources */,
+				F711AACD1A99B74300A2FCF8 /* HTNTableViewController.m in Sources */,
+				F711AAA21A99B48D00A2FCF8 /* ViewController.m in Sources */,
+				F711AAD01A99B90F00A2FCF8 /* HTNAttendee.m in Sources */,
+				F711AA9F1A99B48D00A2FCF8 /* AppDelegate.m in Sources */,
+				F711AA9C1A99B48D00A2FCF8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F711AAAB1A99B48D00A2FCF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F711AAB61A99B48D00A2FCF8 /* HTN_ChallengeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F711AAB11A99B48D00A2FCF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F711AA951A99B48D00A2FCF8 /* HTN Challenge */;
+			targetProxy = F711AAB01A99B48D00A2FCF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F711AAA31A99B48D00A2FCF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F711AAA41A99B48D00A2FCF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F711AAA81A99B48D00A2FCF8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F711AAA91A99B48D00A2FCF8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F711AAB71A99B48D00A2FCF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F711AAB81A99B48D00A2FCF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F711AABA1A99B48D00A2FCF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "HTN Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F711AABB1A99B48D00A2FCF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "HTN Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F711AABD1A99B48D00A2FCF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HTN ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTN Challenge.app/HTN Challenge";
+			};
+			name = Debug;
+		};
+		F711AABE1A99B48D00A2FCF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HTN ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTN Challenge.app/HTN Challenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F711AA911A99B48D00A2FCF8 /* Build configuration list for PBXProject "HTN Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F711AAB71A99B48D00A2FCF8 /* Debug */,
+				F711AAB81A99B48D00A2FCF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F711AAB91A99B48D00A2FCF8 /* Build configuration list for PBXNativeTarget "HTN Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F711AABA1A99B48D00A2FCF8 /* Debug */,
+				F711AABB1A99B48D00A2FCF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F711AABC1A99B48D00A2FCF8 /* Build configuration list for PBXNativeTarget "HTN ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F711AABD1A99B48D00A2FCF8 /* Debug */,
+				F711AABE1A99B48D00A2FCF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F711AA8E1A99B48D00A2FCF8 /* Project object */;
+}
