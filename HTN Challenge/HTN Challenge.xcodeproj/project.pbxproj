@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		F711AA9C1A99B48D00A2FCF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AA9B1A99B48D00A2FCF8 /* main.m */; };
 		F711AA9F1A99B48D00A2FCF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AA9E1A99B48D00A2FCF8 /* AppDelegate.m */; };
-		F711AAA21A99B48D00A2FCF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AAA11A99B48D00A2FCF8 /* ViewController.m */; };
 		F711AAA51A99B48D00A2FCF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F711AAA31A99B48D00A2FCF8 /* Main.storyboard */; };
 		F711AAA71A99B48D00A2FCF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F711AAA61A99B48D00A2FCF8 /* Images.xcassets */; };
 		F711AAAA1A99B48D00A2FCF8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F711AAA81A99B48D00A2FCF8 /* LaunchScreen.xib */; };
 		F711AAB61A99B48D00A2FCF8 /* HTN_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AAB51A99B48D00A2FCF8 /* HTN_ChallengeTests.m */; };
 		F711AACD1A99B74300A2FCF8 /* HTNTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AACC1A99B74300A2FCF8 /* HTNTableViewController.m */; };
 		F711AAD01A99B90F00A2FCF8 /* HTNAttendee.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AACF1A99B90F00A2FCF8 /* HTNAttendee.m */; };
-		F711AAD61A99F5E900A2FCF8 /* HTNUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AAD51A99F5E900A2FCF8 /* HTNUITableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +33,6 @@
 		F711AA9B1A99B48D00A2FCF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F711AA9D1A99B48D00A2FCF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F711AA9E1A99B48D00A2FCF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F711AAA01A99B48D00A2FCF8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F711AAA11A99B48D00A2FCF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F711AAA41A99B48D00A2FCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F711AAA61A99B48D00A2FCF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F711AAA91A99B48D00A2FCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -47,8 +43,6 @@
 		F711AACC1A99B74300A2FCF8 /* HTNTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNTableViewController.m; sourceTree = "<group>"; };
 		F711AACE1A99B90F00A2FCF8 /* HTNAttendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNAttendee.h; sourceTree = "<group>"; };
 		F711AACF1A99B90F00A2FCF8 /* HTNAttendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNAttendee.m; sourceTree = "<group>"; };
-		F711AAD41A99F5E900A2FCF8 /* HTNUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTNUITableViewCell.h; path = ../HTNUITableViewCell.h; sourceTree = "<group>"; };
-		F711AAD51A99F5E900A2FCF8 /* HTNUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTNUITableViewCell.m; path = ../HTNUITableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +84,8 @@
 		F711AA981A99B48D00A2FCF8 /* HTN Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				F711AAD41A99F5E900A2FCF8 /* HTNUITableViewCell.h */,
-				F711AAD51A99F5E900A2FCF8 /* HTNUITableViewCell.m */,
 				F711AA9D1A99B48D00A2FCF8 /* AppDelegate.h */,
 				F711AA9E1A99B48D00A2FCF8 /* AppDelegate.m */,
-				F711AAA01A99B48D00A2FCF8 /* ViewController.h */,
-				F711AAA11A99B48D00A2FCF8 /* ViewController.m */,
 				F711AAA31A99B48D00A2FCF8 /* Main.storyboard */,
 				F711AACB1A99B74300A2FCF8 /* HTNTableViewController.h */,
 				F711AACC1A99B74300A2FCF8 /* HTNTableViewController.m */,
@@ -234,9 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F711AAD61A99F5E900A2FCF8 /* HTNUITableViewCell.m in Sources */,
 				F711AACD1A99B74300A2FCF8 /* HTNTableViewController.m in Sources */,
-				F711AAA21A99B48D00A2FCF8 /* ViewController.m in Sources */,
 				F711AAD01A99B90F00A2FCF8 /* HTNAttendee.m in Sources */,
 				F711AA9F1A99B48D00A2FCF8 /* AppDelegate.m in Sources */,
 				F711AA9C1A99B48D00A2FCF8 /* main.m in Sources */,

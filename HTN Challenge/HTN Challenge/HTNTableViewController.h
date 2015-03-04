@@ -10,7 +10,9 @@
 
 @interface HTNTableViewController : UITableViewController
 
-@property NSMutableDictionary* attendeeInfo;
+@property NSMutableArray *attendeeNames;
+@property NSMutableArray *attendeeCompanies;
+@property NSMutableArray *attendeeImages;
 - (NSData*) RetrieveRawData;
 - (NSMutableDictionary*) ConvertToJSONWithData:(NSData*)data;
 

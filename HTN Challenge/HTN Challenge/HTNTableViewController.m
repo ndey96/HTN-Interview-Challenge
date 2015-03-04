@@ -8,6 +8,7 @@
 
 #import "HTNTableViewController.h"
 #import <Foundation/Foundation.h>
+#import "HTNAttendee.h"
 
 @interface HTNTableViewController ()
 
@@ -15,16 +16,41 @@
 
 @implementation HTNTableViewController
 
+-(void) loadDataFromArray:(NSMutableArray*)attendeeJSONArray {
+
+    for (int i = 0; i < 1212; i++){
+    //for (int i = 0; i < 10; i++){
+        NSDictionary *personData = attendeeJSONArray[i];
+        HTNAttendee *personInfo = [[HTNAttendee alloc] init];
+        
+        //extracts attendee data from personData dictionary
+        personInfo.name = [personData objectForKey:@"name"];
+        personInfo.company = [personData objectForKey:@"company"];
+        personInfo.imageURL = [personData objectForKey:@"picture"];
+        
+        //populates the TableViewController's arrays with the attendee data
+        [self.attendeeNames addObject:personInfo.name];
+        [self.attendeeCompanies addObject:personInfo.company];
+        [self.attendeeImages addObject:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:personInfo.imageURL]]]];
+        
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.attendeeNames = [[NSMutableArray alloc] init];
+    self.attendeeCompanies = [[NSMutableArray alloc] init];
+    self.attendeeImages = [[NSMutableArray alloc] init];
+    
     NSData *rawData = [self RetrieveRawData];
     NSMutableDictionary *attendeeDictionary = [self ConvertToJSONWithData:rawData];
-    NSMutableArray *attendeeArray = [attendeeDictionary objectForKey:@"users"];
+    NSMutableArray *attendeeJSONArray = [[NSMutableArray alloc] init];
+    attendeeJSONArray = [attendeeDictionary objectForKey:@"users"];
     //each element of the attendeeArray holds the data for one user
-    
-    NSLog(@"%@", [attendeeArray objectAtIndex:0]);
-    
+    NSLog(@"the size is %lu",(unsigned long)[attendeeJSONArray count]);
+    //prints number of attendees
+    [self loadDataFromArray:attendeeJSONArray];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,26 +67,26 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.attendeeNames count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HTNCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = self.attendeeNames[indexPath.row];
+    cell.detailTextLabel.text = self.attendeeCompanies[indexPath.row];
+    cell.imageView.image = self.attendeeImages[indexPath.row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -108,21 +134,10 @@
 
 - (NSData*) RetrieveRawData {
     
-    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://htn15-interviews.firebaseio.com/.json"]];
-    NSURLResponse * response = nil;
-    NSError * error = nil;
-    NSData * data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
-//    NSLog(@"I get here");
-//    if (error == nil)
-//    {
-//        NSString *someString = [NSString stringWithFormat:@"%@", data];
-//        NSLog(@"%@", someString);
-//        NSLog(@"congrats");
-//        
-//    } else {
-//        NSLog(@"%@", error.description);
-//    }
-//    
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://htn15-interviews.firebaseio.com/.json"]];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
     return data;
 }
 
@@ -130,7 +145,7 @@
     
     NSError *error = nil;
     NSMutableDictionary *attendeeProfiles = [NSJSONSerialization JSONObjectWithData:data
-                                                                            options:NSJSONReadingMutableContainers error:&error];
+                                                options:NSJSONReadingMutableContainers error:&error];
     return attendeeProfiles;
 }
 
