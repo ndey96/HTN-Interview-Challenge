@@ -18,8 +18,8 @@
 
 -(void) loadDataFromArray:(NSMutableArray*)attendeeJSONArray {
 
-    for (int i = 0; i < 1212; i++){
-    //for (int i = 0; i < 10; i++){
+    //for (int i = 0; i < 1212; i++){
+    for (int i = 0; i < 5; i++){
         NSDictionary *personData = attendeeJSONArray[i];
         HTNAttendee *personInfo = [[HTNAttendee alloc] init];
         
@@ -48,9 +48,12 @@
     NSMutableArray *attendeeJSONArray = [[NSMutableArray alloc] init];
     attendeeJSONArray = [attendeeDictionary objectForKey:@"users"];
     //each element of the attendeeArray holds the data for one user
-    NSLog(@"the size is %lu",(unsigned long)[attendeeJSONArray count]);
+    //NSLog(@"the size is %lu",(unsigned long)[attendeeJSONArray count]);
     //prints number of attendees
     [self loadDataFromArray:attendeeJSONArray];
+   
+//    [NSThread detachNewThreadSelector:@selector(loadDataFromArray:)
+//                             toTarget:self withObject:attendeeJSONArray];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -86,7 +89,6 @@
     
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -131,6 +133,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) doSomething {
+    NSLog(@"ndsvoidsn");
+}
 
 - (NSData*) RetrieveRawData {
     

@@ -15,5 +15,7 @@
 @property NSMutableArray *attendeeImages;
 - (NSData*) RetrieveRawData;
 - (NSMutableDictionary*) ConvertToJSONWithData:(NSData*)data;
+- (void) loadDataFromArray:(NSMutableArray*)attendeeJSONArray;
+- (void) doSomething;
 
 @end
