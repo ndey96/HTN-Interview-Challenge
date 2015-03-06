@@ -15,6 +15,7 @@
 		F711AAB61A99B48D00A2FCF8 /* HTN_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AAB51A99B48D00A2FCF8 /* HTN_ChallengeTests.m */; };
 		F711AACD1A99B74300A2FCF8 /* HTNTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AACC1A99B74300A2FCF8 /* HTNTableViewController.m */; };
 		F711AAD01A99B90F00A2FCF8 /* HTNAttendee.m in Sources */ = {isa = PBXBuildFile; fileRef = F711AACF1A99B90F00A2FCF8 /* HTNAttendee.m */; };
+		F774EA741AA9841500A8FED0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F774EA731AA9841500A8FED0 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		F711AACC1A99B74300A2FCF8 /* HTNTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNTableViewController.m; sourceTree = "<group>"; };
 		F711AACE1A99B90F00A2FCF8 /* HTNAttendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNAttendee.h; sourceTree = "<group>"; };
 		F711AACF1A99B90F00A2FCF8 /* HTNAttendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNAttendee.m; sourceTree = "<group>"; };
+		F774EA731AA9841500A8FED0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		F711AA991A99B48D00A2FCF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F774EA731AA9841500A8FED0 /* logo.png */,
 				F711AA9A1A99B48D00A2FCF8 /* Info.plist */,
 				F711AA9B1A99B48D00A2FCF8 /* main.m */,
 			);
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F774EA741AA9841500A8FED0 /* logo.png in Resources */,
 				F711AAA51A99B48D00A2FCF8 /* Main.storyboard in Resources */,
 				F711AAAA1A99B48D00A2FCF8 /* LaunchScreen.xib in Resources */,
 				F711AAA71A99B48D00A2FCF8 /* Images.xcassets in Resources */,

@@ -9,6 +9,8 @@
 #import "HTNTableViewController.h"
 #import <Foundation/Foundation.h>
 #import "HTNAttendee.h"
+#import <UIKit/UIKit.h>
+
 
 @interface HTNTableViewController ()
 
@@ -16,50 +18,34 @@
 
 @implementation HTNTableViewController
 
--(void) loadDataFromArray:(NSMutableArray*)attendeeJSONArray {
-
-    //for (int i = 0; i < 1212; i++){
-    for (int i = 0; i < 5; i++){
-        NSDictionary *personData = attendeeJSONArray[i];
-        HTNAttendee *personInfo = [[HTNAttendee alloc] init];
-        
-        //extracts attendee data from personData dictionary
-        personInfo.name = [personData objectForKey:@"name"];
-        personInfo.company = [personData objectForKey:@"company"];
-        personInfo.imageURL = [personData objectForKey:@"picture"];
-        
-        //populates the TableViewController's arrays with the attendee data
-        [self.attendeeNames addObject:personInfo.name];
-        [self.attendeeCompanies addObject:personInfo.company];
-        [self.attendeeImages addObject:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:personInfo.imageURL]]]];
-        
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.attendeeNames = [[NSMutableArray alloc] init];
-    self.attendeeCompanies = [[NSMutableArray alloc] init];
-    self.attendeeImages = [[NSMutableArray alloc] init];
+    self.attendees = [[NSMutableArray alloc] init];
     
+    //retrieves JSON data from URL and stores is in an NSData object
     NSData *rawData = [self RetrieveRawData];
+    
+    //converts the JSON data into an NSMutableDictionary
     NSMutableDictionary *attendeeDictionary = [self ConvertToJSONWithData:rawData];
+    
+//each user's data is stored in an element of the attendeeJSONArray
     NSMutableArray *attendeeJSONArray = [[NSMutableArray alloc] init];
     attendeeJSONArray = [attendeeDictionary objectForKey:@"users"];
-    //each element of the attendeeArray holds the data for one user
-    //NSLog(@"the size is %lu",(unsigned long)[attendeeJSONArray count]);
-    //prints number of attendees
+    
+    //stores the name, company, and picture for each user into an the attendees array
     [self loadDataFromArray:attendeeJSONArray];
-   
+    
+    //sorts the attendees array alphabetically by name
+    self.sortedAttendees = [self sortArray:self.attendees];
+    
+    
 //    [NSThread detachNewThreadSelector:@selector(loadDataFromArray:)
 //                             toTarget:self withObject:attendeeJSONArray];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,16 +62,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.attendeeNames count];
+    return [self.attendees count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HTNCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.attendeeNames[indexPath.row];
-    cell.detailTextLabel.text = self.attendeeCompanies[indexPath.row];
-    cell.imageView.image = self.attendeeImages[indexPath.row];
+    HTNAttendee *person = self.sortedAttendees[indexPath.row];
+    
+    //populates cell at indexPath.row with the name, company, and picture
+    cell.textLabel.text = person.name;
+    cell.detailTextLabel.text = person.company;
+    cell.imageView.image = person.image;
     
     return cell;
 }
@@ -134,10 +123,6 @@
 }
 */
 
-- (void) doSomething {
-    NSLog(@"ndsvoidsn");
-}
-
 - (NSData*) RetrieveRawData {
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://htn15-interviews.firebaseio.com/.json"]];
@@ -153,6 +138,33 @@
     NSMutableDictionary *attendeeProfiles = [NSJSONSerialization JSONObjectWithData:data
                                                 options:NSJSONReadingMutableContainers error:&error];
     return attendeeProfiles;
+}
+
+- (void) loadDataFromArray:(NSMutableArray*)attendeeJSONArray {
+    
+    //for (int i = 0; i < 1212; i++){
+    for (int i = 0; i < 100; i++){
+        NSDictionary *personData = attendeeJSONArray[i];
+        HTNAttendee *personInfo = [[HTNAttendee alloc] init];
+        
+        //extracts specific attendee data from personData dictionary and stores it in personInfo
+        personInfo.name = [personData objectForKey:@"name"];
+        personInfo.company = [personData objectForKey:@"company"];
+        NSString *pictureURL = [personData objectForKey:@"picture"];
+        personInfo.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:pictureURL]]];
+        
+        [self.attendees addObject:personInfo];
+        
+    }
+}
+
+- (NSArray*) sortArray:(NSMutableArray *)attendees {
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *sortedAttendees = [attendees sortedArrayUsingDescriptors:sortDescriptors];
+    return sortedAttendees;
+    
 }
 
 @end
