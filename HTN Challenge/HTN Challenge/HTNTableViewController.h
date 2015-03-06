@@ -10,14 +10,16 @@
 
 @interface HTNTableViewController : UITableViewController
 
-//@property NSMutableArray *attendeeNames;
-//@property NSMutableArray *attendeeCompanies;
-//@property NSMutableArray *attendeeImages;
-
 @property NSMutableArray *attendees;
+@property NSArray *sortedAttendees;
 
+//retrieves JSON data from URL and returns it in an NSData object
 - (NSData*) RetrieveRawData;
+//converts the JSON data into an NSMutableDictionary
 - (NSMutableDictionary*) ConvertToJSONWithData:(NSData*)data;
+//each user's data is stored in an element of the attendeeJSONArray
 - (void) loadDataFromArray:(NSMutableArray*)attendeeJSONArray;
+//sorts the attendees array alphabetically by name
+- (NSArray*) sortArray:(NSMutableArray*)attendees;
 
 @end

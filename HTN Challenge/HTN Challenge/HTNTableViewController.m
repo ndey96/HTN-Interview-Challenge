@@ -21,24 +21,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.attendeeNames = [[NSMutableArray alloc] init];
-//    self.attendeeCompanies = [[NSMutableArray alloc] init];
-//    self.attendeeImages = [[NSMutableArray alloc] init];
     self.attendees = [[NSMutableArray alloc] init];
     
-    //retrieves data from URL and stores is in an NSData object
+    //retrieves JSON data from URL and stores is in an NSData object
     NSData *rawData = [self RetrieveRawData];
     
     //converts the JSON data into an NSMutableDictionary
     NSMutableDictionary *attendeeDictionary = [self ConvertToJSONWithData:rawData];
     
-    //stores the data for each user into an element of the attendeeJSONArray
+//each user's data is stored in an element of the attendeeJSONArray
     NSMutableArray *attendeeJSONArray = [[NSMutableArray alloc] init];
     attendeeJSONArray = [attendeeDictionary objectForKey:@"users"];
     
     //stores the name, company, and picture for each user into an the attendees array
     [self loadDataFromArray:attendeeJSONArray];
-   
+    
+    //sorts the attendees array alphabetically by name
+    self.sortedAttendees = [self sortArray:self.attendees];
+    
+    
 //    [NSThread detachNewThreadSelector:@selector(loadDataFromArray:)
 //                             toTarget:self withObject:attendeeJSONArray];
     
@@ -68,26 +69,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HTNCell" forIndexPath:indexPath];
     
-    HTNAttendee *person = self.attendees[indexPath.row];
+    HTNAttendee *person = self.sortedAttendees[indexPath.row];
     
+    //populates cell at indexPath.row with the name, company, and picture
     cell.textLabel.text = person.name;
     cell.detailTextLabel.text = person.company;
     cell.imageView.image = person.image;
     
-    
-    
     return cell;
 }
-
-//- (void)tableView:(NSTableView *)tableView sortDescriptorsDidChange:(NSArray*)oldDescriptors
-//{
-//    [peopleArray sortUsingDescriptors: [tableView sortDescriptors]];
-//    [tableView reloadData];
-//}
-//
-//
-//NSSortDescriptor *titleSorter= [[NSSortDescriptor alloc] initWithKey:@"annotationLocation" ascending:YES];
-//[arrayOfObjects sortUsingDescriptors:[NSArray arrayWithObject:titleSorter];
 
 /*
 // Override to support conditional editing of the table view.
@@ -153,7 +143,7 @@
 - (void) loadDataFromArray:(NSMutableArray*)attendeeJSONArray {
     
     //for (int i = 0; i < 1212; i++){
-    for (int i = 0; i < 10; i++){
+    for (int i = 0; i < 100; i++){
         NSDictionary *personData = attendeeJSONArray[i];
         HTNAttendee *personInfo = [[HTNAttendee alloc] init];
         
@@ -168,5 +158,13 @@
     }
 }
 
+- (NSArray*) sortArray:(NSMutableArray *)attendees {
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *sortedAttendees = [attendees sortedArrayUsingDescriptors:sortDescriptors];
+    return sortedAttendees;
+    
+}
 
 @end
