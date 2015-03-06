@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface HTNAttendee : NSObject
 
 @property NSString *name;
 @property NSString *company;
-@property NSString *imageURL;
+@property UIImage *image;
 
 @end
