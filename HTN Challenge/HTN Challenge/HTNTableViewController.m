@@ -24,8 +24,9 @@
     self.attendees = [[NSMutableArray alloc] init];
     
     //retrieves JSON data from URL and stores is in an NSData object
-    NSData *rawData = [self RetrieveRawData];
-    
+    //NSData *rawData = [self RetrieveRawData];
+    NSString *str=[[NSBundle mainBundle] pathForResource:@"jsonData" ofType:@""];
+    NSData *rawData = [NSData dataWithContentsOfFile:str];
     //converts the JSON data into an NSMutableDictionary
     NSMutableDictionary *attendeeDictionary = [self ConvertToJSONWithData:rawData];
     
@@ -129,6 +130,8 @@
     NSURLResponse *response = nil;
     NSError *error = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    NSLog(@"%@", data);
+    
     return data;
 }
 
